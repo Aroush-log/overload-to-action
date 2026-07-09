@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Overload to Action</title>
 <link rel="stylesheet" href="style.css">
@@ -11,9 +12,18 @@
 
 <p>Turn overwhelming thoughts into clear next steps.</p>
 
-<textarea placeholder="What's overwhelming you?"></textarea>
+<textarea id="problem" placeholder="What's overwhelming you?"></textarea>
 
-<button>Break it down</button>
+<br>
+
+<button onclick="breakDown()">Break it down</button>
+
+<h2>Your first steps:</h2>
+
+<p id="result"></p>
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
