@@ -36,3 +36,27 @@ function breakDown() {
 
   document.getElementById("result").innerHTML = response;
 }
+
+else if (problem.includes("friend") || problem.includes("people") || problem.includes("lonely")) {
+  response = `
+  <b>What’s happening:</b> Social stress 💬<br><br>
+  <b>Your first step:</b> Write down the one conversation or situation you are avoiding.<br><br>
+  <b>Why:</b> Naming the exact problem makes it easier to handle.
+  `;
+}
+
+else if (problem.includes("lazy") || problem.includes("procrast") || problem.includes("motivation")) {
+  response = `
+  <b>What’s happening:</b> Starting feels difficult ⚡<br><br>
+  <b>Your first step:</b> Open the task and work on it for only 5 minutes.<br><br>
+  <b>Goal:</b> Build momentum, not finish everything.
+  `;
+}
+
+else if (problem.includes("idea") || problem.includes("project") || problem.includes("start")) {
+  response = `
+  <b>What’s happening:</b> Idea overload 💡<br><br>
+  <b>Your first step:</b> Write the goal of your idea in one sentence.<br><br>
+  <b>Next:</b> Choose the smallest version you could make.
+  `;
+}
