@@ -1,60 +1,95 @@
 function breakDown() {
   let problem = document.getElementById("problem").value.toLowerCase();
+  let feeling = document.getElementById("feeling").value;
 
   let response = "";
 
-  if (problem.includes("exam") || problem.includes("test") || problem.includes("study")) {
+  // School problems
+  if (
+    problem.includes("exam") ||
+    problem.includes("test") ||
+    problem.includes("study") ||
+    problem.includes("homework") ||
+    problem.includes("assignment")
+  ) {
     response = `
-    <b>What’s happening:</b> School pressure 📚<br><br>
-    <b>Your first step:</b> Write down the topics you need to study. Do not study yet — just make the list.<br><br>
-    <b>Time needed:</b> 2 minutes.
-    `;
-  } 
+    <b>What’s happening:</b> Your brain is seeing one huge problem instead of smaller tasks 📚<br><br>
 
-  else if (problem.includes("career") || problem.includes("future") || problem.includes("job")) {
-    response = `
-    <b>What’s happening:</b> Decision overload 🌱<br><br>
-    <b>Your first step:</b> Pick one career you are curious about and spend 10 minutes learning what people actually do in it.<br><br>
-    <b>Goal:</b> Explore, not decide.
-    `;
-  }
+    <b>Your first step:</b><br>
+    1. Write the exact task you need to finish.<br>
+    2. Pick the smallest possible part (example: open notes, find chapter, write title).<br>
+    3. Work for 10 minutes only.<br><br>
 
-  else if (problem.includes("homework") || problem.includes("assignment")) {
-    response = `
-    <b>What’s happening:</b> Too many tasks 📝<br><br>
-    <b>Your first step:</b> Write every task and deadline in one list.<br><br>
-    <b>Time needed:</b> 5 minutes.
+    <b>Why this works:</b> Starting removes the biggest barrier — the first step.
     `;
   }
 
-  else if (problem.includes("friend") || problem.includes("people") || problem.includes("lonely")) {
+  // Future/career decisions
+  else if (
+    problem.includes("future") ||
+    problem.includes("career") ||
+    problem.includes("job")
+  ) {
     response = `
-    <b>What’s happening:</b> Social stress 💬<br><br>
-    <b>Your first step:</b> Write down the one conversation or situation you are avoiding.<br><br>
-    <b>Why:</b> Naming the exact problem makes it easier to handle.
+    <b>What’s happening:</b> You’re trying to make a big decision without enough information 🌱<br><br>
+
+    <b>Your first step:</b><br>
+    Choose ONE thing you are curious about and spend 15 minutes learning about it.<br><br>
+
+    <b>Do not:</b> Decide your entire future today.<br>
+    <b>Goal:</b> Collect information first.
     `;
   }
 
-  else if (problem.includes("lazy") || problem.includes("procrast") || problem.includes("motivation")) {
+  // Motivation problems
+  else if (
+    problem.includes("lazy") ||
+    problem.includes("procrast") ||
+    problem.includes("motivation")
+  ) {
     response = `
-    <b>What’s happening:</b> Starting feels difficult ⚡<br><br>
-    <b>Your first step:</b> Open the task and work on it for only 5 minutes.<br><br>
-    <b>Goal:</b> Build momentum, not finish everything.
+    <b>What’s happening:</b> The task feels too big to start ⚡<br><br>
+
+    <b>Your first step:</b><br>
+    Open the task and do the first 2-minute action only.<br><br>
+
+    Examples:<br>
+    • Open the document<br>
+    • Write one sentence<br>
+    • Put materials on your desk<br><br>
+
+    <b>Goal:</b> Create momentum.
     `;
   }
 
-  else if (problem.includes("idea") || problem.includes("project") || problem.includes("start")) {
+  // Social problems
+  else if (
+    problem.includes("friend") ||
+    problem.includes("people") ||
+    problem.includes("lonely")
+  ) {
     response = `
-    <b>What’s happening:</b> Idea overload 💡<br><br>
-    <b>Your first step:</b> Write the goal of your idea in one sentence.<br><br>
-    <b>Next:</b> Choose the smallest version you could make.
+    <b>What’s happening:</b> Social situations feel unclear 💬<br><br>
+
+    <b>Your first step:</b><br>
+    Write what happened, what you think it means, and what you actually know.<br><br>
+
+    <b>Next:</b> Choose one small action: send a message, ask a question, or give yourself time.
     `;
   }
 
+  // General overwhelm
   else {
     response = `
-    <b>Your first step:</b> Write the smallest part of this problem you can control today.<br><br>
-    Don’t solve everything. Choose one action.
+    <b>What’s happening:</b> Your brain is holding too many things at once 🌊<br><br>
+
+    <b>Your first step:</b><br>
+    Make 3 lists:<br>
+    1. Things I need to do<br>
+    2. Things I’m worried about<br>
+    3. Things I cannot control<br><br>
+
+    <b>Next:</b> Choose ONE thing from the first list and take the smallest action possible.
     `;
   }
 
